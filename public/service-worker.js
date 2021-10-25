@@ -46,7 +46,8 @@ self.addEventListener('activate', event => {
 /** When the client triggers a fetch, intercept that request to serve cached data first and if necessary, fallback to network data. */
 self.addEventListener('fetch', event => {
 	// Cache successful requests to the API
-	if (event.request.url.includes('/api/')) {
+	const { url, method } = event.request;
+	if (url.includes('/api/') && method === 'GET') {
 		event.respondWith(
 			caches
 				.open(RUNTIME)
