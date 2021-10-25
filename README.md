@@ -1,5 +1,5 @@
 <h1 align="center">Progressive Budget Tracker</h1>
-<h2 align="center">MongoDB & IndexedDB</h2>
+<h2 align="center">MongoDB, IndexedDB, Service Worker & Manifest</h2>
 
 ## Description
 
@@ -20,7 +20,7 @@ This application allows a user to maintain visibility of their budget even when 
 
 [Budget Tracker](https://radiant-wave-66486.herokuapp.com/)
 
-This single-page application presents the user's current budget with a form providing the ability to add new deposit (Add Funds) or expense (Subtract Funds) transactions. Historical transactions are shown in both a table and chart. The main feature of this application is that if the user is without internet connection, they are still able to record transactions into the application in their local session and the budget is updated accordingly. Once internet connection is restored, any "offline" transactions are automatically bulk uploaded to the MongoDB backend for persistent storage.
+This progressive web application presents the user's current budget with a form providing the ability to add new deposit (Add Funds) or expense (Subtract Funds) transactions. Historical transactions are shown in both a table and chart. The main feature of this PWA is that it still functions if the user is without internet connection. "Offline" transactions are recorded into an IndexedDB and synced back to the backing MongoDB via a service worker once network connectivity is restored.
 
 ## License
 
